@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="@drawable/review_card_background"
+    android:layout_marginBottom="12dp"
+    android:elevation="4dp">
+
+    <!-- Reviewer Name and Rating -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Reviewed By: "
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/reviewerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Reviewer Name"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#F66C0B"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/textview1"/>
+
+        <RatingBar
+            android:id="@+id/ratingBarSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="0.5"
+            android:isIndicator="true"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:progressTint="@color/yellow"
+            android:secondaryProgressTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reviewerName"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Timestamp -->
+
+
+    <!-- Review Text -->
+    <TextView
+        android:id="@+id/reviewText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This worker was fantastic! Very professional and on time."
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:textColor="@color/grey" />
+    <TextView
+    android:id="@+id/reviewTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="2 days ago"
+      android:layout_gravity="end"
+    android:textSize="12sp"
+    android:textColor="@color/grey"
+    android:layout_marginTop="4dp" />
+</LinearLayout>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.WorkerProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/left"
+            android:elevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/designer"
+            android:scaleType="fitStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        app:layout_wrapBehaviorInParent="horizontal_only"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:background="@drawable/rounder_corner"
+        app:layout_constraintRight_toRightOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#F2F1F6"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/usernametv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:text="Plumbing Repair"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratetv"
+                android:text="(Add your review)"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="36dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintLeft_toRightOf="@id/usernametv"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+
+            </TextView>
+
+            <CheckBox
+                android:id="@+id/imageView3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="60dp"
+                app:useMaterialThemeColors="false"
+                android:button="@drawable/selector_wishlist_item"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </CheckBox>
+            <ImageView
+                android:id="@+id/shareiv"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/share"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+            <TextView
+                android:id="@+id/nametv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="20dp"
+                android:text="Pablo Escobar"
+                android:textColor="#F66C0B"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/usernametv" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/star"
+                app:layout_constraintRight_toLeftOf="@id/reviewtv"
+                app:layout_constraintStart_toEndOf="@+id/nametv"
+                app:layout_constraintTop_toBottomOf="@id/shareiv">
+            </ImageView>
+            <TextView
+                android:id="@+id/reviewtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="5dp"
+                android:text="See All Review"
+                android:textColor="#F66C0B"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/imageView5"
+                app:layout_constraintTop_toBottomOf="@id/usernametv" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/locationlayout"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reviewtv"
+                >
+
+                <ImageView
+                    android:id="@+id/piniv"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_gravity="start|center"
+                    android:src="@drawable/pin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/loctv"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Adress, City"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="start"
+                    app:layout_constraintEnd_toStartOf="@id/downiv"
+                    app:layout_constraintStart_toEndOf="@+id/piniv"
+                    app:layout_constraintTop_toTopOf="parent">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/downiv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/down"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintLeft_toRightOf="@id/loctv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    >
+
+                </ImageView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tvphone"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#F66C0B"
+                app:layout_constraintTop_toBottomOf="@+id/locationlayout"
+                android:text="Phone: ">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/phonetvworkerprofie"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toRightOf="@+id/tvphone"
+                app:layout_constraintTop_toBottomOf="@+id/locationlayout"
+                android:textColor="@color/black"
+                android:text=" "
+                android:textIsSelectable="true"
+                android:enabled="true"
+                android:focusable="true"
+                android:longClickable="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                >
+
+            </TextView>
+
+
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E2DEDE"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/locationlayout" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="20dp"
+                android:text="About me"
+                android:textColor="#F66C0B"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line1" />
+
+            <TextView
+                android:id="@+id/abouttv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:inputType="textMultiLine"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv"
+                android:text=" "
+                >
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/chatbtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="10dp"
+                android:background="@drawable/custom_button"
+                android:text=" continue to chat"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/abouttv" />
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

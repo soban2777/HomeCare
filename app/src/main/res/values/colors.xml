@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white2">#F2F1F6</color>
+
+    <color name="yellow">#FFB300</color>
+    <color name="purple">#B16EE5</color>
+    <color name="grey">#6D6262</color>
+    <color name="green">#005C4B</color>
+    <color name="darkGrey">#202C33</color>
+    <color name="bottomNav">#D47B10</color>
+    <color name="splash">#D19017</color>
+    <color name="msgNav">#F1EDED</color>
+    <color name="splashstatusbar">#C5781D</color>
+
+
+
+
+
+</resources>

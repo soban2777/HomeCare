@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HomeCare</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="catagories">Catagories</string>
+    <string name="electrition">Electrition</string>
+    <string name="describe_the_issue_you_want_to_get_fixed">Describe the issue you want to get fixed.</string>
+    <string name="search_for_painter">search for \'painter\'</string>
+</resources>

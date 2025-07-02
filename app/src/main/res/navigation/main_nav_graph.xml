@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    android:label="Orders"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/signinFragment"
+        android:name="com.example.myapplication.fragments.SigninFragment"
+        android:label="HomeCare"
+        tools:layout="@layout/fragment_signin">
+        <action
+            android:id="@+id/action_LoginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_signinFragment_to_homeFragment"
+            app:destination="@id/frag_main"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_signinFragment_to_workereditProfileFragment"
+            app:destination="@id/workereditProfileFragment" />
+        <action
+            android:id="@+id/action_signinFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.myapplication.fragments.SignUpFragment"
+        android:label="HomeCare "
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signUpFragment_to_LoginFragment"
+            app:destination="@id/signinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.myapplication.fragments.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_chooseFragment"
+            app:destination="@id/chooseFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseFragment"
+        android:name="com.example.myapplication.fragments.ChooseFragment"
+        tools:layout="@layout/fragment_choose">
+        <action
+            android:id="@+id/action_chooseFragment_to_signinFragment"
+            app:destination="@id/signinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_main"
+        android:name="com.example.myapplication.mainFrag"
+        android:label="HomeCare"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_frag_main_to_myAdsCustomer"
+            app:destination="@id/myAdsCustomer"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_frag_main_to_Post_ad"
+            app:destination="@id/Post_ad"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_frag_main_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_frag_main_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_frag_main_to_chooseFragment"
+            app:destination="@id/chooseFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_frag_main_to_workerProfileFragment"
+            app:destination="@id/workerProfileFragment" />
+        <action
+            android:id="@+id/action_frag_main_to_fragmentCustomerAdProfile"
+            app:destination="@id/fragmentCustomerAdProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.myapplication.fragments.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_accountFragment"
+            app:destination="@id/accountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <action
+        android:id="@+id/action_global_settingsFragment"
+        app:destination="@id/settingsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.myapplication.fragments.AccountFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_frag_main"
+            app:destination="@id/frag_main" />
+    </fragment>
+    <action android:id="@+id/action_global_accountFragment"
+        app:destination="@id/accountFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.myapplication.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_accountFragment"
+            app:destination="@id/accountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_profileFragment_to_frag_main"
+            app:destination="@id/frag_main" />
+    </fragment>
+    <action android:id="@+id/action_global_profileFragment2"
+    app:destination="@id/profileFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myapplication.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <action android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+    <action android:id="@+id/action_global_frag_main"
+        app:destination="@id/frag_main"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+    <fragment
+        android:id="@+id/Post_ad"
+        android:name="com.example.myapplication.fragments.PostAdFrag"
+        android:label="fragment_post_ad"
+        tools:layout="@layout/fragment_post_ad">
+        <action
+            android:id="@+id/action_post_ad_to_myAdsCustomer"
+            app:destination="@id/myAdsCustomer"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_Post_ad_to_frag_main"
+            app:destination="@id/frag_main"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/myAdsCustomer"
+        android:name="com.example.myapplication.fragments.MyAdsCustomerFrag"
+        android:label="fragment_my_ads_customer"
+        tools:layout="@layout/fragment_my_ads_customer" >
+        <action
+            android:id="@+id/action_myAdsCustomer_to_frag_main"
+            app:destination="@id/frag_main"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/workereditProfileFragment"
+        android:name="com.example.myapplication.fragments.WorkerEditProfileFragment"
+        android:label="fragment_worker_profile"
+        tools:layout="@layout/fragment_worker_edit_profile" >
+        <action
+            android:id="@+id/action_workereditProfileFragment_to_homeFragment"
+            app:destination="@id/frag_main" />
+    </fragment>
+    <action android:id="@+id/action_global_workerProfileFragment" app:destination="@id/workereditProfileFragment" />
+    <fragment
+        android:id="@+id/workerProfileFragment"
+        android:name="com.example.myapplication.fragments.WorkerProfileFragment"
+        android:label="fragment_worker_profile"
+        tools:layout="@layout/fragment_worker_profile" >
+        <action
+            android:id="@+id/action_workerProfileFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.myapplication.fragments.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" /><action android:id="@+id/action_global_workerAdFragment" app:destination="@id/chatFragment"/>
+    <fragment
+        android:id="@+id/fragmentCustomerAdProfile"
+        android:name="com.example.myapplication.fragments.FragmentCustomerAdProfile"
+        android:label="fragment_customer_ad_profile"
+        tools:layout="@layout/fragment_customer_ad_profile" >
+        <action
+            android:id="@+id/action_fragmentCustomerAdProfile_to_frag_main"
+            app:destination="@id/frag_main" />
+        <action
+            android:id="@+id/action_fragmentCustomerAdProfile_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteAdsFragment"
+        android:name="com.example.myapplication.fragments.FavoriteAdsFragment"
+        android:label="fragment_favorite_ads"
+        tools:layout="@layout/fragment_favorite_ads" />
+    <action android:id="@+id/action_global_favoriteAdsFragment" app:destination="@id/favoriteAdsFragment" />
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.example.myapplication.fragments.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/review_Fragment"
+        android:name="com.example.myapplication.fragments.SubmitReviewFragment"
+        android:label="fragment_review"
+        tools:layout="@layout/fragment_review_" />
+    <fragment
+        android:id="@+id/allReviewsFragment"
+        android:name="com.example.myapplication.fragments.AllReviewsFragment"
+        android:label="fragment_all_reviews"
+        tools:layout="@layout/fragment_all_reviews" />
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.myapplication.fragments.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+</navigation>
